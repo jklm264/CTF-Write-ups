@@ -1,0 +1,23 @@
+Star Wars (100 pts) - Steganography
+
+With the clue, “Don't search blindly. Look carefully and you will find what you are looking for.” and the hint, 
+“Hint! This challenge is specially made for blind persons :P”.
+
+Once we downloaded the jpg file we used “hexdump –C” and at the very end of the file noticed a long binary string, 
+“100110101010101010111010100110101010101110101010011110”.
+
+With the clue and hint in mind we searched for a binary to braille when we found a Binary 6-bit decoder at 
+http://tyleregeto.com/article/braille-6bit-binary-language.  After inputting the string it yielded the phrase, 
+“doordonot”.
+
+Then we had to figure out how all of this culminates into something resembling a flag. That is when it was clear 
+we needed a Steganographic Decoder; we used https://futureboy.us/stegano/decinput.html. This is where the password 
+was “doordonot” and we also inputted the picture to get a random 64-bit string, “YmVjb21lYWplZGltYXN0ZXJ5b3V3aWxs”.
+
+Finally, when you convert that via any base64 decoder (I used https://www.base64decode.org/) the flag was found; 
+“becomeajedimasteryouwill”.
+
+
+Contributors: Mitch Schmidt, Brandon Everhart, Jordan Mussman
+
+
